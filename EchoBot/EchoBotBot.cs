@@ -1,6 +1,9 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using System;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using EchoBot.Services;
@@ -78,15 +81,24 @@ namespace EchoBot
                 var response = await _qnaMakerServices.QnaMaker.GetAnswersAsync(turnContext);
                 if (response != null && response.Length > 0)
                 {
-                    await
-                   turnContext.SendActivityAsync(response[0].Answer);
+                    await turnContext.SendActivityAsync(response[0].Answer);
+                    //await turnContext.SendActivityAsync("seconde ligne"); 
+                    //using (var client = new HttpClient())
+                    //{
+                    //    client.BaseAddress = new Uri("https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/164eea70-ddab-473c-8563-36fe74e8c196?verbose=true&timezoneOffset=-360&subscription-key=0a43c2db650042eebeb818a7416369ad&q=");
+        
+                    //    client.DefaultRequestHeaders.Accept.Clear();
+                    //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    //    await turnContext.SendActivityAsync(response[0].Answer);
+                    //}
                 }
                 else
                 {
                     var msg = @"No QnA Maker answers were found. This example uses a QnA Maker Knowledge Base that focuses on smart light bulbs. 
                                 To see QnA Maker in action, ask the bot questions like 'Why won't it turn on?' or 'I need help'.";
                     await turnContext.SendActivityAsync(msg);
-                }
+                }
+
             }
             else
             {
