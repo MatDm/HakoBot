@@ -4,17 +4,17 @@
     {
       "type": "endpoint",
       "name": "development",
-      "endpoint": "http://localhost:3978/api/messages",
-      "appId": "b76a831d-d95b-4a50-9069-4b972a68324a",
-      "appPassword": "Pa55word",
+      "endpoint": "http://localhost:63263/api/messages",
+      "appId": "",
+      "appPassword": "",
       "id": "1"
     },
     {
       "type": "endpoint",
       "name": "production",
-      "endpoint": "https://echobot20190318034159.azurewebsites.net/api/messages",
-      "appId": "82a1452f-92ed-4869-91dd-b104ad66c1ec",
-      "appPassword": "rsoBTE1?yexeLMKU6679|%~",
+      "endpoint": "https://test3bot.azurewebsites.net/api/messages",
+      "appId": "8d497ac4-60bd-4ae8-b5db-c381c49adcf1",
+      "appPassword": "aHMG6512+{+nvdfthVDWG0]",
       "id": "150"
     },
     {
@@ -22,7 +22,7 @@
       "endpointkey": "afdff838-d95c-40d3-a32d-b0488a1ee7e5",
       "hostname": "https://qnabxl.azurewebsites.net/qnamaker",
       "id": "101",
-      "kbId": "1acebf4e-b3c0-43d8-b045-658c5081c2de",
+      "kbId": "09ae110d-19ea-407c-bbea-0c4cdf8383f3",
       "name": "QnABot",
       "subscriptionkey": ""
     }

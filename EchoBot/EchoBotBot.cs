@@ -86,7 +86,7 @@ namespace EchoBot
                     //using (var client = new HttpClient())
                     //{
                     //    client.BaseAddress = new Uri("https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/164eea70-ddab-473c-8563-36fe74e8c196?verbose=true&timezoneOffset=-360&subscription-key=0a43c2db650042eebeb818a7416369ad&q=");
-        
+
                     //    client.DefaultRequestHeaders.Accept.Clear();
                     //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     //    await turnContext.SendActivityAsync(response[0].Answer);
@@ -102,7 +102,7 @@ namespace EchoBot
             }
             else
             {
-                await turnContext.SendActivityAsync($"{turnContext.Activity.Type} event detected");
+                //await turnContext.SendActivityAsync($"{turnContext.Activity.Type} event detected");
             }
         }
     }
