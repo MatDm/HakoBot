@@ -7,9 +7,10 @@ using System.Web.Mvc;
 
 namespace ApiHakoBot.Controllers
 {
+    
     public class HomeController : Controller
     {
-        [EnableCors("*", "*", "*")]
+        
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";

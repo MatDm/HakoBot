@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ApiHakoBot
 {
@@ -9,7 +10,8 @@ namespace ApiHakoBot
             // Configuration et services API Web
 
             // Itinéraires de l'API Web
-            config.EnableCors();
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

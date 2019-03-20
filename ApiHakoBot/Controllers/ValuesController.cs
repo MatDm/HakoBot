@@ -5,9 +5,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ApiHakoBot.Controllers
 {
+    
     public class ValuesController : ApiController
     {
         private static string directLineSecret = "6Lkm0P_iA38.8Oq485y1rht4t0Q_nCSIdOIyfSoguKXiS6Bu2IBGqkM";
@@ -15,6 +17,7 @@ namespace ApiHakoBot.Controllers
 
         // This gives a name to the bot user.
         private static string fromUser = "DirectLineClientSampleUser";
+
 
         [HttpGet]
         public List<string> GetAnswer(string question)
