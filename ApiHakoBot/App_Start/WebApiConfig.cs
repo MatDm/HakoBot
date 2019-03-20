@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Net.Http.Headers;
+using System.Web.Http;
 using System.Web.Http.Cors;
 
 namespace ApiHakoBot
@@ -8,7 +9,8 @@ namespace ApiHakoBot
         public static void Register(HttpConfiguration config)
         {
             // Configuration et services API Web
-
+            config.Formatters.JsonFormatter.SupportedMediaTypes
+            .Add(new MediaTypeHeaderValue("text/html"));
             // Itinéraires de l'API Web
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);

@@ -15,14 +15,12 @@ namespace ApiHakoBot.Controllers
         private static string directLineSecret = "6Lkm0P_iA38.8Oq485y1rht4t0Q_nCSIdOIyfSoguKXiS6Bu2IBGqkM";
         private static string botId = "test3botsample";
 
-        // This gives a name to the bot user.
         private static string fromUser = "DirectLineClientSampleUser";
-
 
         [HttpGet]
         public List<string> GetAnswer(string question)
         {
-            //Ajouter gros if formulaire pour detecter si on se trouve dans un chat bot ou le remplissage d'un formulaire
+
             DirectLineClient client = new DirectLineClient(directLineSecret);
             Conversation conversation = client.Conversations.StartConversation();
 
@@ -41,22 +39,20 @@ namespace ApiHakoBot.Controllers
                        where m.From.Id == botId
                        select m;
 
-            //var rep = msgT.Last().Text;
-
             var rep = msgT.Last().Text;
+
+            string badrequest = "No QnA Maker answers were found. This example uses a QnA Maker Knowledge Base that focuses on smart light bulbs. \r\n                                To see QnA Maker in action, ask the bot questions like 'Why won't it turn on?' or 'I need help'.";
+
+            if (rep == badrequest)
+            {
+                rep = "I'm sorry but i can't answer your question. But i'm working on it ! Try again later.";
+            }
+
             char[] delimiterChars = { '$' };
             var returnlist = rep.Split(delimiterChars).ToList();
 
             return returnlist;
 
-            //switch (rep)
-            //{
-            //    case "No QnA Maker answers were found.":
-            //        sendQuestionHp(rep);
-            //        rep = "your question has been sent to the helpdesk ";
-            //        break;
-            //}
-            //return rep;
         }
     }
 }
