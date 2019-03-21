@@ -12,6 +12,6 @@ namespace ApiHakoBot.Models
         [Required]
         public int id { get; set; }
         [Required]
-        public string name { get; set; }
+        public string question { get; set; }
     }
 }
