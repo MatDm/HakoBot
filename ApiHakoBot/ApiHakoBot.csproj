@@ -279,6 +279,7 @@
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\QuestionRepository.cs" />
     <Compile Include="SendMail\SendQuestion.cs" />
+    <Compile Include="Tools\Converter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

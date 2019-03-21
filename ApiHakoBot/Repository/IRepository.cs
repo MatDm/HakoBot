@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ApiHakoBot.Repository
 {
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IQuestionRepository<T> where T : class
     {
-        TEntity Add(TEntity entity);
+        //TEntity Add(TEntity entity);
+        void Add(T entity);
     }
 }
