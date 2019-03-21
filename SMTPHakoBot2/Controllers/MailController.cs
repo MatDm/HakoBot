@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace SMTPHakoBot.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Mail")]
+    [Route("mail")]
     public class MailController : Controller
     {
         private SmtpClient smtpClient;
@@ -20,8 +20,9 @@ namespace SMTPHakoBot.Controllers
         }
 
 
-        [HttpPost]
-        public async Task<IActionResult> Post(string message)
+
+        [Route("get")]
+        public async Task<IActionResult> Get(string message)
         {
             await smtpClient.SendMailAsync(new MailMessage(
                 from: "hakobot27@gmail.com",

@@ -20,9 +20,10 @@ namespace SMTPHakoBot
             Configuration = configuration;
         }
         public IConfiguration Configuration { get; }
- 
+
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddScoped<SmtpClient>((serviceProvider) =>
             {
                 var config = serviceProvider.GetRequiredService<IConfiguration>();
@@ -48,7 +49,10 @@ namespace SMTPHakoBot
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder =>
+            builder.WithOrigins("https://smtphakobot2.azurewebsites.net"));
             app.UseMvc();
         }
+
     }
 }
