@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiHakoBot", "ApiHakoBot\Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMTPHakoBot", "SMTPHakoBot\SMTPHakoBot.csproj", "{42EF80C0-1BC2-4261-883C-5AE6201FFC44}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerPoint", "PowerPoint", "{0D9C79C6-FB19-4633-8A25-DA53AFDB00CD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
