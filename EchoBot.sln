@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EchoBot", "EchoBot\EchoBot.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiHakoBot", "ApiHakoBot\ApiHakoBot.csproj", "{F1C671AC-D3F7-4CE0-B862-A3BC249FFA20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMTPHakoBot", "SMTPHakoBot\SMTPHakoBot.csproj", "{42EF80C0-1BC2-4261-883C-5AE6201FFC44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F1C671AC-D3F7-4CE0-B862-A3BC249FFA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1C671AC-D3F7-4CE0-B862-A3BC249FFA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1C671AC-D3F7-4CE0-B862-A3BC249FFA20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42EF80C0-1BC2-4261-883C-5AE6201FFC44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EF80C0-1BC2-4261-883C-5AE6201FFC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EF80C0-1BC2-4261-883C-5AE6201FFC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EF80C0-1BC2-4261-883C-5AE6201FFC44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
