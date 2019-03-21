@@ -1,4 +1,5 @@
-﻿using ApiHakoBot.Entities;
+﻿using ApiHakoBot.Context;
+using ApiHakoBot.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,9 @@ namespace ApiHakoBot.Repository
 {
     public class QuestionRepository : IRepository<Question>
     {
-        private HakoBotContext _context;
+        private HakoBotDbContext _context;
 
-        public QuestionRepository(HakoBotContext context)
+        public QuestionRepository(HakoBotDbContext context)
         {
             _context = context;
         }
